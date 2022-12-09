@@ -23,7 +23,12 @@ function guessNumber() {
             alert('Загаданное число больше')
             checkNum(num)
         } else if (number == num) {
-            confirm('Поздравляю, Вы угадали!!!');
+            let again = confirm('Поздравляю, Вы угадали!!! Хотите сыграть еще?');
+            if (again === true) {
+                checkNum(num)
+            } else if (again === false) {
+                alert('Игра окончена')
+            }
         }
     }
     return checkNum(randomNumber);
